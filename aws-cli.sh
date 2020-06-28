@@ -270,6 +270,7 @@ printf "5) ${RED}Notice:${NC} If you want to upgrade installed current AWS CLI v
 printf "6) Uninstall AWS CLI Version 1 : Please write input  ${GREEN}un1${NC}  press Enter.\n"
 printf "7) Uninstall AWS CLI Version 2 : Please write input  ${GREEN}un2${NC}  press Enter.\n"
 printf "8) Uninstall AWS CLI Version 2 for macOS : Please write input  ${GREEN}unm2${NC}  press Enter.\n"
+printf "9) If you want to stop the script : Please write input  ${GREEN}q${NC}  press Enter.\n"
 
 echo '==========================================================================================='
 
@@ -287,6 +288,8 @@ in
     un1) printf "aws-cli-ver-1 uninstalling...\n"; AWS_CLI_VER_1_UN ;;
     un2) printf "aws-cli-ver-2 uninstalling...\n"; AWS_CLI_VER_2_UN ;;
     unm2) printf "aws-cli-ver-2 for macOS uninstalling...\n"; AWS_CLI_VER_2_MAC_UN ;;
+    q) printf "The script stopped.\n" 
+       exit;;
     *) printf "Error: Nothing selected from the listbox...\n"
        exit ;;
 esac
